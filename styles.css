@@ -29,9 +29,23 @@ a {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 94rem 1fr;
-    grid-template-columns: 
-    minmax(2rem, 1fr), 
-    minmax(min-content, 94rem),
-    minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr), minmax(min-content, 94rem), minmax(2rem, 1fr);
+    row-gap: 3rem;
+}
+
+.heading {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.rem;
+}
+
+.text {
+    grid-column: 2 / 3;
+}
+
+.hero {
+    border: 2px solid red;
+    grid-column: 1 / -1;
+    position: relative;
 }
